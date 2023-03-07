@@ -9,7 +9,7 @@ app.use(
 )
 
 const router = require('./routes');
-app.use('/router', router);
+app.use('/', router);
 
 
 

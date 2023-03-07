@@ -1,9 +1,14 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/' , (req , res) =>{
-    req.send('<h1> Hello </h1>');
-});
+const homeController = require('../controllers/homeController');
+
+router.get('/' , homeController.home);
+
+router.post('/create-product' , homeController.createProduct);
+router.post('/payload' , homeController.operations);
+
+
 
 console.log('Router is running fine');
 module.exports = router;
