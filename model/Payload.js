@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const payloadSchema = new Schema({
@@ -7,7 +7,7 @@ const payloadSchema = new Schema({
         required: true
     },
     quantity: {
-        type: String,
+        type: Number,
         required: true
     },
 },{

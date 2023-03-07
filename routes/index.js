@@ -6,7 +6,7 @@ const homeController = require('../controllers/homeController');
 router.get('/' , homeController.home);
 
 router.post('/create-product' , homeController.createProduct);
-router.post('/payload' , homeController.operations);
+router.post('/payload/:id' , homeController.operations);
 
 
 
