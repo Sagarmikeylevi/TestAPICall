@@ -1,10 +1,17 @@
 const express = require('express');
 const app = express();
-const Port = 3000;
+require('dotenv').config()
+const Port = process.env.PORT;
+const db = require('./config/mongoose');
 
-app.get('/' , (req , res) =>{
-    req.send('<h1> Hello </h1>');
-});
+app.use(
+    express.urlencoded({extended: true})
+)
+
+const router = require('./routes');
+app.use('/router', router);
+
+
 
 app.listen(Port , (err) =>{
     if(err) {
